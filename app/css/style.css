@@ -1,0 +1,104 @@
+body
+{
+  background-color: rgba(246, 241, 209);
+}
+main
+{
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  width: 40%;
+  height: 500px;
+  margin-left: 30%;
+  margin-top:5%;
+  align-items: center;
+  background-color: white;
+}
+
+#champ_name
+{
+  border:2.5px solid grey;
+  outline: none;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#champ_name:focus
+{
+  border : 2.5px solid rgb(136, 209, 205);
+}
+
+.radio_box
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.role_Button
+{
+  appearance:none;
+}
+
+.img_role
+{
+  width: 30px;
+  height : 30px;
+  transition: 0.3s;
+}
+
+.img_role:hover
+{
+  transition: 0.3s;
+  transform: scale(1.5,1.5);
+  cursor: pointer;
+}
+
+.img_role_select
+{
+  transition: 0.5s;
+  width: 30px;
+  height : 30px;
+  border : 1px solid black;
+  border-radius: 10px;
+}
+
+.img_role_select:hover
+{
+  transition: 0.3s;
+  transform: scale(1.5,1.5);
+  cursor: pointer;
+}
+
+.Button
+{
+  font-size: 20px;
+  border-radius: 20px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.Button:hover
+{
+  transition: box-shadow 0.3s ;
+  box-shadow: 0px 1px rgb(163, 115, 106);
+}
+
+#Valider
+{
+  width: 30%;
+}
+
+.valid_button
+{
+  box-shadow : 1px 10px rgb(106, 163, 137);
+  color : rgb(121, 186, 156);
+  border : 0.3px solid rgb(106, 163, 137);
+}
+.unvalid_button
+{
+  box-shadow : 1px 10px rgb(163, 115, 106);
+  color : rgb(163, 115, 106);
+  border : 0.3px solid rgb(163, 115, 106);
+}

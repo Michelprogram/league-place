@@ -1,0 +1,22 @@
+{
+  "Summoners": [
+    "https://opgg-static.akamaized.net/images/lol/spell/SummonerFlash.png?image=q_auto,w_42&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/spell/SummonerDot.png?image=q_auto,w_42&v=1601445791"
+  ],
+  "Champ": "https://opgg-static.akamaized.net/images/lol/champion/Leblanc.png?image=q_auto,w_140&v=1601445791",
+  "Page1": [
+    "https://opgg-static.akamaized.net/images/lol/perk/8112.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perk/8139.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perk/8138.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perk/8135.png?image=q_auto&v=1601445791"
+  ],
+  "Page2": [
+    "https://opgg-static.akamaized.net/images/lol/perk/8226.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perk/8210.png?image=q_auto&v=1601445791"
+  ],
+  "Page3": [
+    "https://opgg-static.akamaized.net/images/lol/perkShard/5005.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perkShard/5008.png?image=q_auto&v=1601445791",
+    "https://opgg-static.akamaized.net/images/lol/perkShard/5003.png?image=q_auto&v=1601445791"
+  ]
+}

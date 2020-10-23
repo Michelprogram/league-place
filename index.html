@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>League place</title>
+    <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="app/css/style_wait_page.css">
+    <link rel="stylesheet" href="app/css/style_rune_page.css">
+  </head>
+  <body>
+    <main>
+    <input required id="champ_name" type="text" placeholder="champ name">
+    <div class="radio_box">
+
+      <div class="1">
+        <input class="role_Button" type="radio" name="Role" value="Top" id="Top">
+        <label for="Top"> <img class="img_role" src="app/images/top.png" alt=""> </label>
+      </div>
+
+      <div class="2">
+        <input class="role_Button" type="radio" name="Role" id="Jungle" value="Jungle">
+        <label for="Jungle"> <img class="img_role" src="app/images/jungle.png" alt=""> </label>
+      </div>
+
+      <div class="3">
+        <input class="role_Button" type="radio" name="Role" id="Mid" value="Mid">
+        <label for="Mid"> <img class="img_role" src="app/images/mid.png" alt=""> </label>
+      </div>
+
+      <div class="4">
+        <input class="role_Button" type="radio" name="Role" id="Bot" value="Bot">
+        <label for="Bot"> <img class="img_role" src="app/images/adc.png" alt=""> </label>
+      </div>
+
+      <div class="5">
+        <input class="role_Button" type="radio" id="Support" name="Role" value="Support">
+        <label for="Support"> <img class="img_role" src="app/images/support.png" alt=""> </label>
+      </div>
+
+    </div>
+
+    <button class="unvalid_button Button" type="button" id="Valider" name="button" disabled>Envoyer</button>
+    </main>
+  </body>
+</html>
+<script src="render.js" type="text/javascript"></script>
