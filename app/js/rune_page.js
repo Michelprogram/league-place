@@ -17,7 +17,6 @@ const footer = document.createElement("footer")
 
 function create_rune_page(list_data,nom_champ)
 {
-
   creation_top_page(list_data.Champ,list_data.Summoners,nom_champ)
 
   div_liste_runes.setAttribute("class","wrapper")
@@ -56,7 +55,6 @@ function creation_top_page(img_champ,img_summoner,name_champ)
 
 }
 
-
 function creation_liste(size,page,name_class_ul,divv)
 {
 
@@ -66,17 +64,16 @@ function creation_liste(size,page,name_class_ul,divv)
   let ul = document.createElement("ul")
   ul.setAttribute("class",name_class_ul)
 
-  for (var i = 0; i < size ; i++)
+  for(let rune in page)
   {
     let li = document.createElement("li")
     let img = document.createElement("img")
 
-    new_setAttributes(img,{"src":page[i],"class":"image_rune"})
+    new_setAttributes(img,{"src":page[rune],"class":"image_rune","title":rune})
 
     li.appendChild(img)
 
     ul.appendChild(li)
-
   }
 
   div_runes.appendChild(ul)
@@ -93,9 +90,10 @@ function creation_bottom_page()
 
 }
 
-
-
 back_button.addEventListener('click',()=>{
+  clean_page(div_liste_runes)
   clean_page(main_corps)
+  clean_input(champ_name)
   create_main_page()
+
 })

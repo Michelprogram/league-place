@@ -13,9 +13,9 @@ class Scraping_OPGG:
         self.nom_perso = nom_perso
         self.poste = poste
 
-        self.rune_fondamentales = []
-        self.rune_secondaires = []
-        self.rune_tierce = []
+        self.rune_fondamentales = {}
+        self.rune_secondaires = {}
+        self.rune_tierce = {}
 
         self.summoner = []
 
@@ -35,18 +35,24 @@ class Scraping_OPGG:
 
         for i in range(len(perk_page)):
             perk_page_row = perk_page[i].find_all("div",class_="perk-page__item--active")
+
             for j in range(len(perk_page_row)):
                 lien = Scraping_OPGG.formatage_link(perk_page_row[j].find("img")['src'])
+                name_rune = perk_page_row[j].find("img")["alt"]
                 if i == 0:
-                    self.rune_fondamentales.append(lien)
+                    self.rune_fondamentales[name_rune] = lien
                 else:
-                    self.rune_secondaires.append(lien)
+                    self.rune_secondaires[name_rune] = lien
 
     def Rune_tierce(self):
         fragment_page = self.soup.select("tbody.tabItem:nth-child(4) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > div:nth-child(5)")
         all_image = fragment_page[0].find_all("img",class_="active")
         for i in range(len(all_image)):
-            self.rune_tierce.append(Scraping_OPGG.formatage_link(all_image[i]["src"]))
+            lien = Scraping_OPGG.formatage_link(all_image[i]["src"])
+            name_rune = all_image[i]["alt"]
+            if name_rune in self.rune_tierce:
+                self.rune_tierce[name_rune+"1"] = lien
+            self.rune_tierce[name_rune] = lien
 
     def Champ_info(self):
         header = self.soup.select(".champion-stats-header-info")

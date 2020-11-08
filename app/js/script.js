@@ -12,55 +12,18 @@ function get_data (champ_name,poste){
     })
   })
 }
-class Button_role
+
+function who_is_checked(list_button)
 {
-  constructor (list_button)
+  let i = 0
+  let flag = false
+  while (i <= 4 && !flag)
   {
-    this.list_button = list_button
+    list_button[i].checked ? flag = true :  null
+    i++
   }
+  return flag ? list_button[i-1].defaultValue : undefined
 
-  one_is_checked()
-  {
-    let flag = false
-    for (var i = 0; i < this.list_button.length; i++) {
-      if (this.list_button[i].checked)
-      {
-        flag = true
-      }
-    }
-
-    return flag
-  }
-
-  who_is_checked()
-  {
-    let i = 0
-    while (!this.list_button[i].checked || i > 4)
-    {
-      i++
-    }
-    return this.list_button[i].defaultValue
-  }
-
-
-}
-
-function clean_input(input)
-{
-  input.value = ""
-}
-
-function clean_select_button(list_radio_button,list_img)
-{
-  for (var i = 0; i < list_radio_button.length; i++)
-  {
-    list_radio_button[i].checked = false
-    try
-    {
-      list_img[i].classList.replace("img_role_select","img_role")
-    }
-    catch(err){}
-  }
 }
 
 
@@ -126,13 +89,3 @@ function new_setAttributes(source,list_dict)
       source.setAttribute(key,value)
   }
 }
-
-//Enlève tout les éléments de la page
-function clean_page(element)
-{
-  while (element.firstChild){
-    element.removeChild(element.firstChild)
-  }
-}
-
-module.exports = { Button_role,clean_input,clean_select_button,get_champ_name,get_data,get_list_champ,new_appendChild,clean_page,new_setAttributes }
